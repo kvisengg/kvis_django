@@ -37,3 +37,15 @@ class Reviews(models.Model):
     user_position = models.CharField(max_length=255)
     description = models.CharField(max_length=2000)
     image = models.CharField(max_length=255)
+
+
+class Team(models.Model):
+    name = models.CharField(max_length=255)
+    position = models.CharField(max_length=255)
+    image_id = models.CharField(max_length=500, default='')
+
+
+class Portfolio(models.Model):
+    name = models.CharField(max_length=255)
+    small_description = models.CharField(max_length=255)
+    image_id = models.CharField(max_length=255)
