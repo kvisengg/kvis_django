@@ -34,6 +34,14 @@
 
     <title>KVIS(Knowledge Vision Innovation Strength)</title>
   
+<style>
+input[type=text], input[type=email], textarea {
+ width: 100%;
+ padding: 12px 20px;
+ margin: 8px 0;
+ display: inline-block;
+}
+</style>
 </head>
 
 <body>
@@ -516,7 +524,7 @@ solutions and coved surface considering all Pharma guidelines.
           <div class="section-title">
             <h2>Contact</h2>
             <h3><span>Contact Us</span></h3>
-            <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+            <p>Write your query and will reply within 24 hours.Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
           </div>
   
           <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -524,7 +532,8 @@ solutions and coved surface considering all Pharma guidelines.
               <div class="info-box mb-4">
                 <i class="bx bx-map"></i>
                 <h3>Our Address</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <p>F-21, Phase-8, Industrial Area,
+S.A.S Nagar (Mohali) PB.-160071</p>
               </div>
             </div>
   
@@ -532,7 +541,7 @@ solutions and coved surface considering all Pharma guidelines.
               <div class="info-box  mb-4">
                 <i class="bx bx-envelope"></i>
                 <h3>Email Us</h3>
-                <p>contact@example.com</p>
+                <p>sales@kvisengg.com</p>
               </div>
             </div>
   
@@ -540,7 +549,7 @@ solutions and coved surface considering all Pharma guidelines.
               <div class="info-box  mb-4">
                 <i class="bx bx-phone-call"></i>
                 <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+                <p>+91 6230000600</p>
               </div>
             </div>
   
@@ -549,35 +558,21 @@ solutions and coved surface considering all Pharma guidelines.
           <div class="row" data-aos="fade-up" data-aos-delay="100">
   
             <div class="col-lg-6 ">
-              <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+              <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6860.370066073944!2d76.69101877358699!3d30.71319822657564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fee566ec12caf%3A0xe82bcee83eb20ba5!2sPhase%208B%2C%20Industrial%20Area%2C%20Sector%2074%2C%20Sahibzada%20Ajit%20Singh%20Nagar%2C%20Punjab%20140308!5e0!3m2!1sen!2sin!4v1666947371987!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 600px;" allowfullscreen></iframe>
             </div>
   
             <div class="col-lg-6">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                <div class="form-row">
-                  <div class="col form-group">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validate"></div>
-                  </div>
-                  <div class="col form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validate"></div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                  <div class="validate"></div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                  <div class="validate"></div>
-                </div>
-                <div class="mb-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
+              
+              {% if success %}
+                <div class="alert alert-success">Thanks , we will connect with you soon. </div>
+              {% endif %}
+                
+              <form action="" method="post">
+                 {% comment %} {% csrf_token %} {% endcomment %}
+
+                     {{ contact_form }}
+
+                  <input class="btn btn-primary" type="submit" value="Submit">
               </form>
             </div>
   
@@ -590,83 +585,16 @@ solutions and coved surface considering all Pharma guidelines.
 
   <footer id="footer">
 
-    <!-- <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>BizLand<span>.</span></h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a >Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a >About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a >Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a >Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a >Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a >Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a >Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a >Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a >Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a >Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
-            <div class="social-links mt-3">
-              <a  class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a  class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a  class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a  class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a  class="linkedin"><i class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-
-        </div>
-      </div>
+      <div class="footer-top">
+    
     </div>
 
     <div class="container py-4">
       <div class="copyright">
-        &copy; Copyright <strong><span>BizLand</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>KVIS Engg. </span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Develop by <a href="">S2 DBug Lab, Khanna</a>
       </div>
     </div>
   </footer>

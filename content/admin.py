@@ -1,5 +1,5 @@
 from django.contrib import admin
-from content.models import AboutUs, Portfolio, Product, ProjectComplete, Reviews, Team
+from content.models import AboutUs, Contact, Portfolio, Product, ProjectComplete, Reviews, Team
 
 # Register your models here.
 
@@ -24,14 +24,21 @@ class ReviewsAdmin(admin.ModelAdmin):
 
 
 class TeamAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'position','image_id')
+    list_display = ('id', 'name', 'position', 'image_id')
+
 
 class PortfolioAdmin(admin.ModelAdmin):
-    list_display =('id','name','image_id','small_description')
+    list_display = ('id', 'name', 'image_id', 'small_description')
+
+
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'email', 'subject', 'message')
+
 
 admin.site.register(AboutUs, AboutUsAdmin)
 admin.site.register(ProjectComplete, ProjectCompleteAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Reviews, ReviewsAdmin)
 admin.site.register(Team, TeamAdmin)
-admin.site.register(Portfolio,PortfolioAdmin)
+admin.site.register(Portfolio, PortfolioAdmin)
+admin.site.register(Contact,ContactAdmin)
