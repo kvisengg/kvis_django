@@ -67,9 +67,9 @@ input[type=text], input[type=email], textarea {
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="/">KV<span style="color: #FF8C00;">i</span>S Engg<span>.</span></a></h1>
+      <!-- <h1 class="logo mr-auto"><a href="/">KV<span style="color: #FF8C00;">i</span>S Engg<span>.</span></a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="/" class="logo mr-auto"><img src="{% static 'assets/logo.jpg'%}" alt=""></a> -->
+      <a  class="logo mr-auto"><img src="{% static 'assets/logo.jpg'%}" alt=""></a>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -96,7 +96,7 @@ input[type=text], input[type=email], textarea {
             </ul>
           </li> -->
           <li><a href="#contact">Contact</a></li>
-          <li><span class="badge badge-info">Comming Soon</span>
+          <li><a target="_blank" href="{% static 'assets/kvis-catalogue.pdf' %}" class="badge badge-info">Brochure</a>
           </li>
         </ul>
       </nav><!-- .nav-menu -->
